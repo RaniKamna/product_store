@@ -34,26 +34,45 @@ export default function Productform() {
     }
 
     const postData = () => {
+        setProductData(productData.product)
         if (Object.keys(productData).length <= 4) {
             return;
         } else {
             productData.quantity = Number(productData.quantity);
             productData.vat = Number(productData.vat);
             productData.pricegross = Number(productData.pricegross);
-            console.log(productData.vat);
-            axios.post(`${process.env.REACT_APP_API_URL}/products/new`, {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Headers": "Origin,X-Requested-With,Content-Type,Accept"
-                }, productData
-            })
+            //console.log(productData.vat);
+            // axios.post(`${process.env.REACT_APP_API_URL}/products/new`
+            // , {
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //         "Access-Control-Allow-Origin": "*",
+            //         "Access-Control-Allow-Headers": "Origin,X-Requested-With,Content-Type,Accept"
+            //     }, productData
+            // }
+            // )
+            //     .then((resp) => {
+            //         setProductData(resp.data);
+            //     })
+            //     .catch((err) => {
+            //         console.log(err);
+            //     })
+
+            axios.post(
+                `${process.env.REACT_APP_API_URL}/products/new`,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    }, productData
+                }
+            )
                 .then((resp) => {
                     setProductData(resp.data);
                 })
                 .catch((err) => {
-                    console.log(err.response.data);
-                })
+                    console.log(err);
+                });
+
             refreshPage();
         }
     }
