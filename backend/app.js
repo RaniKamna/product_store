@@ -5,7 +5,7 @@ const errorMiddleware = require("./middleware/error");
 var cors = require('cors');
 
 const corsOptions = {
-    origin: 'https://admin-store-frontend.vercel.app',
+    origin: 'https://product-store-api-sable.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 };
