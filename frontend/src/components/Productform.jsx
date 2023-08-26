@@ -39,9 +39,9 @@ export default function Productform() {
             return;
         } else {
             productData.quantity = Number(productData.quantity);
-            productData.vat = Number(productData.vat);
+            productData.gst = Number(productData.gst);
             productData.pricegross = Number(productData.pricegross);
-            //console.log(productData.vat);
+            //console.log(productData.gst);
             // axios.post(`${process.env.REACT_APP_API_URL}/products/new`
             // , {
             //     headers: {
@@ -68,6 +68,7 @@ export default function Productform() {
             )
                 .then((resp) => {
                     setProductData(resp.data.product);
+                    //console.log(resp.data.product)
                 })
                 .catch((err) => {
                     console.log(err);
@@ -79,7 +80,7 @@ export default function Productform() {
 
     const calculate = () => {
         const value1 = document.getElementById('inputPiceGross').value;
-        const value2 = document.getElementById('inputVat').value;
+        const value2 = document.getElementById('inputGst').value;
 
         const result = Number(value1) - Number(value2 / 100);
 
@@ -123,22 +124,22 @@ export default function Productform() {
                                     </div>
                                 </div>
                                 <div className="row mb-2">
-                                    <label htmlFor="inputVat" className="col-sm-4 col-form-label">Vat</label>
+                                    <label htmlFor="inputGst" className="col-sm-4 col-form-label">Gst</label>
                                     <div className="col-sm-8">
                                         <select
                                             className="form-select"
-                                            id="inputVat"
-                                            value={productData.vat}
-                                            name='vat'
+                                            id="inputGst"
+                                            value={productData.gst}
+                                            name='gst'
                                             onChange={handleChange}
                                         >
                                             <option value='0' defaultValue='selected'>Select Option</option>
+                                            <option value='5'>5%</option>
                                             <option value='10'>10%</option>
                                             <option value='15'>15%</option>
-                                            <option value='25'>25%</option>
                                         </select>
                                         {
-                                            ((productData.vat === undefined || productData.vat.length === 0) && showerror) ?
+                                            ((productData.gst === undefined || productData.gst.length === 0) && showerror) ?
                                                 (<p className='activeerror'>
                                                     <span>* </span>please fill the required field
                                                 </p>) : null

@@ -19,7 +19,7 @@ export const TableStructure = ({data}) => {
                                     <tr key={id}>
                                         <td>{product.name}</td>
                                         <td>{product.pricegross}</td>
-                                        <td>{product.vat}</td>
+                                        <td>{product.gst}</td>
                                         <td>{product.pricenet}</td>
                                         <td>{product.quantity}</td>
                                     </tr>
