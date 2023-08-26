@@ -6,9 +6,9 @@ const productSchema = new mongoose.Schema({
         required:[true, "Please enter product name"],
         trim:true,
     },
-    vat:{
+    gst:{
         type:Number,
-        required:[true,"Please select vat"]
+        required:[true,"Please select gst"]
     },
     quantity:{
         type:Number,
