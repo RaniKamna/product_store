@@ -34,7 +34,7 @@ export default function Productform() {
     }
 
     const postData = () => {
-        setProductData(productData.product)
+        console.log(productData)
         if (Object.keys(productData).length <= 4) {
             return;
         } else {
