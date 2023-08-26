@@ -8,7 +8,7 @@ export const TableStructure = ({data}) => {
                             <tr>
                                 <th scope="col">Product Name</th>
                                 <th scope="col">Price per Qty (Gross) </th>
-                                <th scope="col">VAT</th>
+                                <th scope="col">GST</th>
                                 <th scope="col">Price per Qty (net) </th>
                                 <th scope="col">Total Stock: </th>
                             </tr>
