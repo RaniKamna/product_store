@@ -21,15 +21,15 @@ export default function Productform() {
     }
 
     const handleSubmit = (event) => {
-        setShowerror(true);
         if (Object.keys(productData).length === 0) {
             event.preventDefault();
+            setShowerror(true);
         } else if (Object.keys(productData).length <= 4) {
             event.preventDefault();
-            return;
+            setShowerror(true);
         }
         else {
-            event.preventDefault();
+            refreshPage();
         }
     }
 
@@ -73,7 +73,6 @@ export default function Productform() {
                 .catch((err) => {
                     console.log(err);
                 });
-            refreshPage();
         }
     }
 
