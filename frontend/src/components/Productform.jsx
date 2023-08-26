@@ -34,7 +34,7 @@ export default function Productform() {
     }
 
     const postData = () => {
-        console.log(productData)
+        //console.log(productData)
         if (Object.keys(productData).length <= 4) {
             return;
         } else {
@@ -67,13 +67,13 @@ export default function Productform() {
                 }
             )
                 .then((resp) => {
-                    setProductData(resp.data);
+                    setProductData(resp.data.product);
                 })
                 .catch((err) => {
                     console.log(err);
                 });
 
-            //refreshPage();
+            refreshPage();
         }
     }
 
