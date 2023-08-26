@@ -67,13 +67,12 @@ export default function Productform() {
                 }
             )
                 .then((resp) => {
-                    setProductData(resp.data.product);
-                    //console.log(resp.data.product)
+                    setProductData(resp.data);
+                    //console.log(resp.data)
                 })
                 .catch((err) => {
                     console.log(err);
                 });
-
             refreshPage();
         }
     }
