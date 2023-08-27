@@ -22,6 +22,9 @@ export const TableStructure = ({data}) => {
                                         <td>{product.gst}</td>
                                         <td>{product.pricenet}</td>
                                         <td>{product.quantity}</td>
+                                        <td>
+                                            <button>FaPen</button>
+                                        </td>
                                     </tr>
                                 )
                             })}

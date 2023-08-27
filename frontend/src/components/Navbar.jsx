@@ -18,17 +18,17 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Grocery Store</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">Admin</Link>
-                            </li>
+                            </li> */}
                         </ul>
                         <div className="navbar-nav mb-2 mb-lg-0 d-flex">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/settings">Settings</Link>
-                            </li>
-                            <li className="nav-item">
+                            </li> */}
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
-                            </li>
+                            </li> */}
                         </div>
                     </div>
                 </div>

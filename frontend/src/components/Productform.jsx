@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTrash } from "react-icons/fa";
+import { BsFillTrashFill } from "react-icons/bs";
 import axios from 'axios';
 
 export default function Productform() {
@@ -199,7 +199,7 @@ export default function Productform() {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-light" data-bs-dismiss="modal"><FaTrash /> Delete</button>
+                                    <button type="button" className="btn btn-light" data-bs-dismiss="modal"><BsFillTrashFill /> Delete</button>
                                     <button type="submit" className="btn btn-primary" onClick={postData}>Save</button>
                                 </div>
                             </form>
