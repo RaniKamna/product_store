@@ -1,4 +1,5 @@
 import React from 'react';
+// import { FaPen,FaTrash } from 'react-icons/fa';
 
 export const TableStructure = ({data}) => {
     return (
@@ -22,9 +23,9 @@ export const TableStructure = ({data}) => {
                                         <td>{product.gst}</td>
                                         <td>{product.pricenet}</td>
                                         <td>{product.quantity}</td>
-                                        <td>
-                                            <button>FaPen</button>
-                                        </td>
+                                        {/* <td>
+                                            <button><FaTrash /></button>
+                                        </td> */}
                                     </tr>
                                 )
                             })}
